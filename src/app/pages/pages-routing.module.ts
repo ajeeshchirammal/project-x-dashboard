@@ -24,6 +24,21 @@ const routes: Routes = [{
         .then(m => m.LayoutModule),
     },
     {
+      path: 'shop',
+      loadChildren: () => import('./shop/shop.module')
+        .then(m => m.ShopModule),
+    },
+    {
+      path: 'category-type',
+      loadChildren: () => import('./category-type/category-type.module')
+        .then(m => m.CategoryTypeModule),
+    }, {
+      path: 'service-type',
+      loadChildren: () => import('./service-type/service-type.module')
+        .then(m => m.ServiceTypeModule),
+    },
+
+    {
       path: 'forms',
       loadChildren: () => import('./forms/forms.module')
         .then(m => m.FormsModule),
